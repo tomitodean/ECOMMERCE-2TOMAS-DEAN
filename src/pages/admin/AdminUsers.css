@@ -1,0 +1,13 @@
+/* ADMIN DE USUARIOS
+   Usa los estilos de AdminProductos.css. Acá solo va lo propio de esta página. */
+
+/* La tabla de usuarios tiene pocas columnas: no necesita el ancho
+   mínimo de 1500px que usa la tabla de pedidos */
+.tabla-usuarios {
+    min-width: 640px;
+}
+
+.tabla-usuarios .acciones {
+    width: 120px;
+    min-width: 120px;
+}

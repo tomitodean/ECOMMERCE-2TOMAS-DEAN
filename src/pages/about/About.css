@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary-color: #26343b;
+    --secondary-color: #00a6a7;
+    --text-color: #ffffff;
+    --text-secondary-color: #26343b;
+    --accent-color: #de2531;
+    --hover-color: #a01d26;
+    --hover-color2: #008686;
+    --background-color: #26343b;
+    --background-secondary-color: #ddcb0c;
+    --font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+    font-family: var(--font-family);
+}
+
+/* ==================================
+   ABOUT
+================================== */
+
+.about{
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 80px 40px;
+    padding-top: 200px;
+}
+
+.about-container{
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-texto h1{
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.about-texto p{
+    max-width: 920px;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.about-texto h2{
+    display: inline-block;
+    margin-top: 20px;
+
+    font-size: 34px;
+    color: var(--accent-color);
+}
+
+/* CARD DESARROLLADOR */
+
+.developer-card{
+    background: rgba(255,255,255,.06);
+    border: 2px solid rgba(255,255,255,.18);
+    border-radius: 30px;
+    padding: 35px 25px;
+
+    text-align: center;
+}
+
+.avatar{
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.developer-card h3{
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+
+/* ==================================
+   TABLET
+================================== */
+
+@media (max-width: 1024px){
+
+    .about-container{
+        grid-template-columns: 1fr;
+    }
+
+    .developer-card{
+        max-width: 420px;
+    }
+
+}
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 768px){
+
+    .about{
+        padding: 60px 20px;
+    }
+
+    .about-texto h1{
+        font-size: 34px;
+    }
+
+    .about-texto p{
+        font-size: 18px;
+    }
+
+    .about-texto h2{
+        font-size: 28px;
+    }
+
+}
+
+/* ==================================
+   IPHONE
+================================== */
+
+@media (max-width: 414px){
+
+    .about{
+        padding: 50px 15px;
+    }
+
+    .about-texto h1{
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .about-texto p{
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .developer-card{
+        padding: 28px 18px;
+        border-radius: 22px;
+    }
+
+    .avatar{
+        width: 135px;
+        height: 135px;
+    }
+
+}
+

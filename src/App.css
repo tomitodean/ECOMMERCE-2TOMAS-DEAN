@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary-color: #26343b;
+    --text-color: #ffffff;
+    --text-secondary-color: #26343b;
+    --accent-color: #de2531;
+    --hover-color: #a01d26;
+    --hover-color2: #008686;
+    --background-color: #26343b;
+    --background-secondary-color: #ddcb0c;
+    --font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+    font-family: var(--font-family);
+}
+
+/* ========================= */
+/* VIDEO */
+/* ========================= */
+
+
+span {
+    color: var(--accent-color);
+    font-family: var(--font-family);
+    font-weight: 900;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    background: var(--background-color);
+
+    padding: 22px 6%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar {
+
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 170px;
+    object-fit: contain;
+}
+
+/* ========================= */
+/* BUSCADOR */
+/* ========================= */
+
+.search-box {
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+    justify-self: center;
+}
+
+.search-box input {
+
+    width: 100%;
+    height: 42px;
+    border-radius: 40px;
+    border: 1.5px solid white;
+    background: transparent;
+    padding: 0 55px 0 22px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.search-box button {
+
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box button img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.container-home {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* ========================= */
+/* ICONOS */
+/* ========================= */
+
+.icons {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    justify-self: end;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account p {
+    margin: 0;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.icon-circle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-circle img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.cart img {
+    width: 19px;
+    height: 19px;
+}
+
+.cart-number {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ff3045;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* ========================= */
+/* MENU */
+/* ========================= */
+
+.nav-menu {
+    width: 100%;
+    max-width: 1280px;
+    margin: 18px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-menu li {
+    position: relative;
+    width: auto;
+    padding-bottom: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown-link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dropdown-label {
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ========================= */
+/* DROPDOWN */
+/* ========================= */
+
+.mobile-dropdown input {
+    display: none;
+}
+
+.dropdown-label {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dropdown {
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    min-width: 230px;
+    background: white;
+    border-radius: 14px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    z-index: 100;
+}
+
+.dropdown li {
+    padding-bottom: 0;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 12px 18px;
+    color: #22363d;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dropdown li a:hover {
+    background: #f2f2f2;
+    color: var(--accent-color);
+}
+

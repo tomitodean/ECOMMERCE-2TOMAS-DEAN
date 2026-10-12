@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.9 256.68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="512.9" height="256.68"/>
+    </clipPath>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g class="cls-2">
+      <image width="2682" height="1333" transform="translate(-59.55 -20.77) scale(.24)" xlink:href="../../../../LD GRAFICA WEB/RECURSOS/FOTOS/IMPRESION DIGITALL.png"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,266 @@
+/* DETALLE DE PRODUCTO */
+
+.detalle-producto {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 20px 6% 130px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+/* Enlace "Atrás" */
+.detalle-atras {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0 14px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.detalle-atras:hover {
+    color: var(--secondary-color);
+}
+
+/* Dos columnas: a la izquierda la imagen y debajo la descripción;
+   a la derecha el nombre, el precio, las medidas y los botones */
+.detalle-container {
+    display: grid;
+    grid-template-columns: 46% 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "imagen info"
+        "extra  info";
+    column-gap: 5%;
+    align-items: start;
+}
+
+/* COLUMNA IZQUIERDA */
+
+.detalle-imagen {
+    grid-area: imagen;
+    background: #fff;
+}
+
+.detalle-extra {
+    grid-area: extra;
+    min-width: 0;
+}
+
+.detalle-imagen img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.detalle-subtitulo-seccion {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 40px 0 18px;
+}
+
+.detalle-descripcion {
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+/* COLUMNA DERECHA */
+
+.detalle-info {
+    grid-area: info;
+    min-width: 0;
+    padding-top: 12px;
+}
+
+.detalle-nombre {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.detalle-bajada {
+    font-size: 14px;
+    padding-top: 8px;
+}
+
+.detalle-precio {
+    font-size: 32px;
+    font-weight: 800;
+    padding-top: 30px;
+}
+
+.detalle-precio-nota {
+    font-size: 14px;
+    padding-top: 8px;
+}
+
+.detalle-titulo-medidas {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 30px 0 14px;
+}
+
+.detalle-medidas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botón con borde blanco: medidas, carrito, subir archivo */
+.detalle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 20px;
+    border: 1.5px solid #fff;
+    border-radius: 40px;
+    background: transparent;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.detalle-btn:hover,
+.detalle-btn-elegido {
+    background: var(--text-color);
+    color: var(--text-secondary-color);
+}
+
+/* Aviso si se intenta agregar al carrito sin elegir medida */
+.detalle-falta-medida {
+    padding-top: 10px;
+    color: #ff8a92;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Aviso con borde rojo */
+.detalle-aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0;
+    padding: 18px 24px;
+    border: 1.5px solid var(--accent-color);
+    border-radius: 45px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.detalle-aviso-icono {
+    font-size: 26px;
+}
+
+/* Fila de "Agregar al carrito" + corazón */
+.detalle-fila-carrito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.detalle-btn-carrito,
+.detalle-btn-archivo {
+    min-height: 46px;
+    font-weight: 600;
+}
+
+.detalle-btn-favorito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.detalle-btn-favorito:hover,
+.detalle-btn-favorito-activo {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* El input de archivo real no se ve: se usa el botón "Subir tu archivo" */
+.detalle-input-archivo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.detalle-input-archivo:focus-visible + .detalle-btn-archivo,
+.detalle-btn:focus-visible,
+.detalle-btn-favorito:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.detalle-archivo-elegido {
+    padding-top: 12px;
+    font-size: 14px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Mensajes de "cargando" y "no encontrado" */
+.detalle-mensaje {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.detalle-mensaje .detalle-btn {
+    width: auto;
+}
+
+/* TABLET Y CELULAR: una sola columna (imagen, datos de compra, descripción) */
+@media (max-width: 900px) {
+    .detalle-producto {
+        padding: 10px 16px 80px;
+    }
+
+    .detalle-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "imagen"
+            "info"
+            "extra";
+    }
+
+    .detalle-info {
+        padding-top: 24px;
+    }
+
+    .detalle-subtitulo-seccion {
+        padding: 28px 0 12px;
+    }
+}

@@ -1,0 +1,68 @@
+/* PÁGINAS DE REGISTER Y LOGIN */
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px 130px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 720px;
+    padding: 40px;
+    background: #1d2930;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 25px;
+    color: var(--text-color);
+}
+
+/* El login tiene menos campos, así que la tarjeta es más angosta */
+.auth-card-chica {
+    max-width: 460px;
+}
+
+.auth-titulo {
+    font-size: 32px;
+    font-weight: 800;
+    padding-bottom: 8px;
+}
+
+.auth-subtitulo {
+    font-size: 16px;
+    color: rgba(255, 255, 255, .7);
+    padding-bottom: 30px;
+}
+
+.auth-btn-ancho {
+    width: 100%;
+}
+
+.auth-link {
+    padding-top: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, .8);
+}
+
+.auth-link a {
+    color: var(--text-color);
+    font-weight: 800;
+}
+
+.auth-link a:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 639px) {
+    .auth-page {
+        padding: 30px 16px 80px;
+    }
+
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+    .auth-titulo {
+        font-size: 26px;
+    }
+}
