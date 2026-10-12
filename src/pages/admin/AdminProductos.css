@@ -686,3 +686,18 @@ td img {
     }
 
 }
+
+/* Columna "Descripción" de la tabla de productos:
+   ancho limitado y como máximo 3 líneas, para que la fila no quede muy alta */
+.celda-descripcion {
+    min-width: 220px;
+    max-width: 340px;
+}
+
+.texto-descripcion {
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

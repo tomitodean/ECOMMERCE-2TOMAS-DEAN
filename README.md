@@ -39,8 +39,8 @@ El sitio permite ver los productos de la gráfica, entrar al detalle de cada uno
 Hace falta tener instalado [Node.js](https://nodejs.org/).
 
 ```bash
-git clone https://github.com/tu-usuario/ecommerce-frontend
-cd ecommerce-frontend
+git clone https://github.com/tomitodean/ECOMMERCE-2TOMAS-DEAN.git
+cd ECOMMERCE-2TOMAS-DEAN
 npm install
 npm run dev
 ```

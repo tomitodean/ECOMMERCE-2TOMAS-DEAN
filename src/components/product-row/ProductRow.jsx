@@ -8,6 +8,9 @@ export default function ProductRow({ product, handleEdit, handleDelete }) {
                 <img src={product.imagen} alt={product.nombre} />
             </td>
             <td>{product.nombre}</td>
+            <td className="celda-descripcion">
+                <div className="texto-descripcion">{product.descripcion}</div>
+            </td>
             <td>{product.stock}</td>
             <td>
                 {new Date(product.AtCreated).toLocaleDateString("es-AR", { timeZone: "UTC" })}

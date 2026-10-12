@@ -15,6 +15,11 @@ library.add(fas, far, fab);
 const URL_BASE = "https://6aab23beea0e22daa6dbcf7d.mockapi.io";
 
 function AdminProductos() {
+    // React Hook Form maneja su propio estado, por eso se le pide
+    // al compilador de React que no optimice este componente.
+    // Sin esto, después de agregar o cancelar, el formulario de edición
+    // aparecía vacío y no dejaba editar.
+    "use no memo"
 
     const [products, setProducts] = useState([]);
 
@@ -135,7 +140,9 @@ function AdminProductos() {
             setValue("precio", productToEdit.precio);
             setValue("categoria", productToEdit.categoria);
             setValue("stock", productToEdit.stock);
-            setValue("AtCreated", new Date(productToEdit.AtCreated).toISOString().split("T")[0]);
+            // Si el producto no tiene una fecha válida, el campo queda vacío (antes se rompía)
+            const fecha = new Date(productToEdit.AtCreated);
+            setValue("AtCreated", isNaN(fecha) ? "" : fecha.toISOString().split("T")[0]);
             console.log("Editar producto:", productToEdit);
             setEditingProductId(id);
 
@@ -330,7 +337,8 @@ function AdminProductos() {
                             <thead>
                                 <tr>
                                     <th>Foto</th>
-                                    <th>Descripción del producto</th>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
                                     <th>Stock</th>
                                     <th>Fecha</th>
                                     <th>Precio</th>
